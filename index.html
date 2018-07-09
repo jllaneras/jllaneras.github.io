@@ -13,7 +13,7 @@
 			<header>
 				<h1>Josep Llaneras</h1>
 				<ul class="contact-data">
-					<li><i class="fa fa-envelope" aria-hidden="true" title="email"></i> <a href="https://kontactr.com/user/jllaneras">Contact me</a></li>
+					<li><i class="fa fa-envelope" aria-hidden="true" title="email"></i> <a href="#contact">Contact me</a></li>
 				</ul>
 			</header>
 
@@ -96,6 +96,23 @@
 				</ul>
 
 			</section>
+
+			<section id="contact">
+				<h1>Contact me</h1>
+				<form method="POST" action="https://www.enformed.io/20urryaq" class="contact">
+					<ul>
+						<li><input type="text" name="name" placeholder="Name" required /></li>
+						<li><input type="email" name="email" placeholder="Email" required /></li>
+						<li><input type="text" name="*subject" placeholder="Subject" required /></li>
+						<li><textarea name="message" rows="4" placeholder="Message" required></textarea></li>
+						<li><input type="submit" value="Send Email" /></li>
+					</ul>
+					<input type="hidden" name="*reply" value="email" />
+					<input type="hidden" name="*honeypot" />
+					<input type="hidden" name="*redirect" value="http://jmln.me/message-sent.html" />
+				<form/>
+			</section>
+
 
 		</main>
 	</body>
