@@ -34,10 +34,6 @@ ul {
 	list-style-type: none;
 }
 
-.clear {
-	clear: both;
-}
-
 h1 {
 	font-family: 'Libre Baskerville', serif;
 	font-size: 30px;
@@ -51,19 +47,13 @@ header h1 {
 	font-size: 35px;
 }
 
-header ul.contact-data {
-	position: absolute;
-	top:0;
-	right: 0;
-}       
-     
+section h3 {
+	font-weight: bold;
+}
+
 section h2 {
 	font-size: 25px;
 	color: #00b33c;
-}
-
-section h3 {
-	font-weight: bold;
 }
 
 footer {
@@ -78,6 +68,12 @@ main {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 1em;
+}
+
+header ul.contact-data {
+	position: absolute;
+	top:0;
+	right: 0;
 }
 
 div.experience {
@@ -99,11 +95,12 @@ div.experience div.description {
 	display: inline;
 }
 
+.page-break	{
+	display: none;
+}
 
-@media all {
-	.page-break	{
-		display: none;
-	}
+.clear {
+	clear: both;
 }
 
 @media print {
@@ -112,3 +109,18 @@ div.experience div.description {
 		page-break-before: always;
 	}
 }
+
+@media screen and (max-width: 479px) {
+	/* CSS for small screens */	
+	div.experience aside {
+		float: none;
+		display: block;
+		border: 0;
+	}
+
+	header ul.contact-data {
+		position: relative;
+	}
+
+}
+
