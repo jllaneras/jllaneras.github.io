@@ -15,7 +15,7 @@
 			<header>
 				<h1>Hi, I'm Pep</h1>
 				<ul class="contact-data">
-					<li><i class="fa fa-envelope" aria-hidden="true" title="email"></i> <a href="#contact">Contact me</a></li>
+					<li><i class="fa fa-envelope" aria-hidden="true" title="email"></i> <a href="#contact">Contact</a></li>
 				</ul>
 				<p>This is my online curriculum vitae. I'm a software developer living in Brussels, Belgium. I've been working professionally on software development since 2007. You can have a look below for more details and feel free to <a href="#contact">contact me</a> if you're interested in my profile.</p>
 			</header>
@@ -78,16 +78,19 @@
 				
 			</section>
 
-			<section>
+			<section id="studies">
 				<h1>University studies</h1>
 				<h2>Master's degree in Computer Science</h2>
 				<div class="experience">
-					<ul>
-						<li><i class="fa fa-calendar" aria-hidden="true" title="Dates"></i> Oct 2002 &rArr; Oct 2007 </li>
-						<li><i class="fa fa-globe" aria-hidden="true" title="Location"></i> Palma (Spain)<li>
-						<li><i class="fa fa-building-o" aria-hidden="true" title="Business"></i> University of the Balearic Islands</li>
-						<li><i class="fa fa-link" aria-hidden="true" title="Website"></i> <a href="http://www.uib.eu">uib.eu</a></li>
-					</ul>
+					<aside>
+						<ul>
+							<li><i class="fa fa-calendar" aria-hidden="true" title="Dates"></i> Oct 2002 &rArr; Oct 2007 </li>
+							<li><i class="fa fa-globe" aria-hidden="true" title="Location"></i> Palma (Spain)<li>
+							<li><i class="fa fa-building-o" aria-hidden="true" title="Business"></i> University of the Balearic Islands</li>
+							<li><i class="fa fa-link" aria-hidden="true" title="Website"></i> <a href="http://www.uib.eu">uib.eu</a></li>
+						</ul>
+					</aside>
+					<div class="description"></div>
 				</div>
 			</section>
 
@@ -122,7 +125,7 @@
 						<li><input type="text" name="name" placeholder="Name" required /></li>
 						<li><input type="email" name="email" placeholder="Email" required /></li>
 						<li><textarea name="message" rows="4" placeholder="Message" required></textarea></li>
-						<li><input type="submit" value="Send email" /></li>
+						<li class="form-buttons"><input type="submit" value="Send email" /></li>
 					</ul>
 					<input type="hidden" name="*subject" value="jmln.me|contact" />
 					<input type="hidden" name="*reply" value="email" />

@@ -17,6 +17,14 @@ ul {
 	padding: 0;
 }
 
+p {
+	margin:0;
+}
+
+p + p {
+	margin-top: 16px;
+}
+
 /*
 -------------------------------------------------------------- */
 
@@ -27,7 +35,7 @@ html * {
 }
 
 h1 {
-	margin-top: 2em;
+	margin-top: 40px;
 }
 
 ul {
@@ -41,6 +49,7 @@ h1 {
 
 header {
 	position: relative;
+	overflow:hidden;
 }
 
 header h1 {
@@ -54,6 +63,7 @@ section h3 {
 section h2 {
 	font-size: 25px;
 	color: #00b33c;
+	margin-top: 16px;
 }
 
 footer {
@@ -65,7 +75,7 @@ footer {
 }
 
 main {
-	max-width: 1200px;
+	max-width: 1024px;
 	margin: 0 auto;
 	padding: 1em;
 }
@@ -83,16 +93,20 @@ div.experience {
 div.experience aside {
 	resize: none;
 	margin-right: 1em;
+	margin-bottom: 16px;
 	white-space: nowrap;
 	float: left;
 	display: inline;
-	padding-right: 1em;
-	border-right: 5px dotted grey;
-	border-bottom: 5px dotted grey;
+	padding: 10px;
+	background-color: #eee;
 }
 
 div.experience div.description {
 	display: inline;
+}
+
+section#studies {
+	overflow: hidden;
 }
 
 section#contact {
@@ -102,9 +116,12 @@ section#contact {
 form.contact input,textarea {
 	margin-bottom: 10px;
 	padding: 7px;
-	border-radius: 5px;
-	border: 3px solid #333;
+	border: 3px solid #eee;
 	width: 100%;
+}
+
+form.contact ul li.form-buttons {
+	text-align: right;
 }
 
 form.contact input[type=submit] {
@@ -112,6 +129,8 @@ form.contact input[type=submit] {
 	background-color:#00b33c;
 	border: 3px solid #00b33c;
 	font-weight: bold;
+	width: auto;
+	padding: 10px;
 }
 
 .page-break	{
@@ -134,12 +153,12 @@ form.contact input[type=submit] {
 	div.experience aside {
 		float: none;
 		display: block;
-		border: 0;
 	}
 
-	header ul.contact-data {
-		position: relative;
+	form.contact input[type=submit] {
+		width: 100%;
 	}
+
 
 }
 
