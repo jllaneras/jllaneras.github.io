@@ -97,15 +97,41 @@ div.experience aside {
 	white-space: nowrap;
 	float: left;
 	display: inline;
-	padding: 10px;
+	padding: 1em;
 	background-color: #eee;
+}
+
+div.experience aside ul {
+	margin-bottom: 0;
 }
 
 div.experience div.description {
 	display: inline;
 }
 
+div.experience div.description h3 {
+	margin-top: 0.5em;
+}
+
+.js section#experience div.experience div.description p {
+	display: none;
+}
+
+.js section#experience button.read-more {
+	display: inline;
+	border: 3px solid #00b33c;
+	color: white;
+	background-color: #00b33c;
+	padding: 0.5em;
+	font-weight: bold;
+	margin-bottom: 1em;
+}
+
 section#studies {
+	overflow: hidden;
+}
+
+section#experience div.experience {
 	overflow: hidden;
 }
 
@@ -120,17 +146,13 @@ form.contact input,textarea {
 	width: 100%;
 }
 
-form.contact ul li.form-buttons {
-	text-align: right;
-}
-
 form.contact input[type=submit] {
 	color: white;
 	background-color:#00b33c;
 	border: 3px solid #00b33c;
 	font-weight: bold;
 	width: auto;
-	padding: 10px;
+	padding: 0.5em;
 }
 
 .page-break	{
@@ -139,6 +161,10 @@ form.contact input[type=submit] {
 
 .clear {
 	clear: both;
+}
+
+.hidden { 
+	display: none;
 }
 
 @media print {
@@ -150,9 +176,14 @@ form.contact input[type=submit] {
 
 @media screen and (max-width: 479px) {
 	/* CSS for small screens */	
-	div.experience aside {
+	section#experience div.experience aside {
 		float: none;
 		display: block;
+		margin-right: 0;
+	}
+
+	section#experience div.experience button.read-more {
+		width: 100%;
 	}
 
 	form.contact input[type=submit] {
