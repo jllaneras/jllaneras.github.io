@@ -39,7 +39,7 @@
 					<div class="description">
 							<h3>Building the Home'Bank private website for retail customers</h3>
 
-							<button class="read-more hidden" onclick="VITA.showJobDescription(this.parentNode, event)">Read more</button>
+							<button class="read-more hidden">Read more</button>
 
 							<p>ING Belgium is the Belgian subsidiary of the ING Group, an international banking company.</p>
 							<p>My team was in charge of revamping Home'Bank, the retail customer website, using modern technologies. We also used Agile practices, like the Scrum methodology, continuous delivery, pair programming, code reviews, etc. I worked on the home page of the Home'Bank website where the customers can check the status of their accounts. I also worked on the Investments and User Settings web applications.</p>
@@ -60,7 +60,7 @@
 					<div class="description">
 							<h3>Building the software platform for European Schoolnet</h3>
 
-							<button class="read-more hidden" onclick="VITA.showJobDescription(this.parentNode, event)">Read more</button>
+							<button class="read-more hidden">Read more</button>
 
 							<p>European Schoolnet is a network of 31 European Ministries of Education. As a non-profit organization, it aims to bring innovation in teaching and learning to its key stakeholders: Ministries of Education, schools, teachers, researchers and industry partners.</p>
 							<p>I was part of the technical team dedicated to support the other teams in the organization, composed of about 80 people. We created and maintained the necessary infrastructure, tools and web applications that enabled us to, not only sustain the network of European Ministries of Education, but also to develop websites and web applications for the European Commission and some industry partners.</p>
@@ -81,7 +81,7 @@
 					<div class="description">
 						<h3>Building a wide variety of software projects from A to Z for different public and private companies</h3>
 	
-							<button class="read-more hidden" onclick="VITA.showJobDescription(this.parentNode, event)">Read more</button>
+							<button class="read-more hidden">Read more</button>
 
 						<p>3digits focuses mainly on developing software projects for the public administration of the Balearic Islands (Spain), even though I also worked on projects for international companies (like <a href="http://group.hotelbeds.com/content/about-us">Hotelbeds</a>) and for smaller local companies as well (e.g. online shops).</p>
 							<p>Among other projects, we also open sourced <a href="http://ibkey.sourceforge.net/?idioma=en_EN">IBKey-Device-Manager</a>, a Java library to abstract away the access to digital certificates contained in different device types and the generation and verification of digital signatures used in web applications we developed for the public administration.</p>
@@ -133,7 +133,9 @@
 
 			<section id="contact">
 				<h1>Contact me</h1>
-				<form method="POST" action="https://www.enformed.io/20urryaq" class="contact">
+				<div id="message-sent" class="notification success hidden">Thanks for your email! I'll get back to you soon.</div>
+				<div id="message-not-sent" class="notification failure hidden">I'm sorry, there was a problem sending your email. Please try later.</div>
+				<form id="contact-form" method="POST" action="https://www.enformed.io/20urryaq" class="contact">
 					<ul>
 						<li><input type="text" name="name" placeholder="Name" required /></li>
 						<li><input type="email" name="email" placeholder="Email" required /></li>
@@ -143,7 +145,6 @@
 					<input type="hidden" name="*subject" value="jmln.me|contact" />
 					<input type="hidden" name="*reply" value="email" />
 					<input type="hidden" name="*honeypot" />
-					<input type="hidden" name="*redirect" value="http://jmln.me/message-sent.html" />
 				<form/>
 			</section>
 

@@ -155,6 +155,27 @@ form.contact input[type=submit] {
 	padding: 0.5em;
 }
 
+form.contact input[type=submit]:disabled {
+	background-color: #bbbbbb;
+	border: 3px solid #bbbbbb;
+}
+
+.notification {
+	padding: 1em;
+	font-weight: bold;
+	margin-bottom: 1em;
+}
+
+.notification.success {
+	border: 4px solid #00b33c;
+	background-color: #efe;
+}
+
+.notification.failure {
+	border: 4px solid #f44336;
+	background-color: #fee;
+}
+
 .page-break	{
 	display: none;
 }
