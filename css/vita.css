@@ -122,6 +122,7 @@ div.experience div.description h3 {
 	padding: 0.5em;
 	font-weight: bold;
 	margin-bottom: 1em;
+	cursor: pointer;
 }
 
 section#studies {
@@ -150,6 +151,7 @@ form.contact input[type=submit] {
 	font-weight: bold;
 	width: auto;
 	padding: 0.5em;
+	cursor: pointer;
 }
 
 form.contact input[type=submit]:disabled {
