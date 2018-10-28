@@ -192,6 +192,23 @@ form.contact input[type=submit]:disabled {
 		display: block;
 		page-break-before: always;
 	}
+
+	.js section#experience button.read-more {
+		display: none;
+	}
+	
+	.js section#experience div.experience div.description p {
+		display: block;
+	}
+
+	section#contact {
+		display: none;
+	}
+
+	ul.contact-data li.contact-link {
+		display: none;
+	}
+
 }
 
 @media screen and (max-width: 479px) {
