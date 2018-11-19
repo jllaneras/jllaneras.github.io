@@ -28,10 +28,15 @@ p + p {
 /*
 -------------------------------------------------------------- */
 
+:root {
+	--font-color: #333;
+	--accent-color: #00aa55;
+}
+
 html * {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 100%;
-	color: #333;
+	color: var(--font-color);
 }
 
 ul {
@@ -41,7 +46,7 @@ ul {
 h1 {
 	font-family: 'Libre Baskerville', serif;
 	font-size: 1.9em;
-	margin-top: 40px;
+	margin-top: 1em;
 }
 
 header {
@@ -59,12 +64,11 @@ section h3 {
 
 section h2 {
 	font-size: 1.55em;
-	color: #00b33c;
-	margin-top: 16px;
+	color: var(--accent-color);
 }
 
 footer {
-	background-color: #333;
+	background-color: var(--font-color);
 	color: #fff;
 	width:100%;
 	padding: 3px;
@@ -110,15 +114,19 @@ div.experience div.description h3 {
 	margin-top: 0.5em;
 }
 
+div.experience + div.experience {
+	margin-top: 1em;
+}
+
 .js section#experience div.experience div.description p {
 	display: none;
 }
 
 .js section#experience button.read-more {
 	display: inline;
-	border: 3px solid #00b33c;
+	border: 3px solid var(--accent-color);
 	color: white;
-	background-color: #00b33c;
+	background-color: var(--accent-color);
 	padding: 0.5em;
 	font-weight: bold;
 	margin-bottom: 1em;
@@ -137,6 +145,10 @@ section#contact {
 	max-width: 480px;
 }
 
+form.contact {
+	margin-left: 1em;
+}
+
 form.contact input,textarea {
 	margin-bottom: 10px;
 	padding: 7px;
@@ -146,8 +158,8 @@ form.contact input,textarea {
 
 form.contact input[type=submit] {
 	color: white;
-	background-color:#00b33c;
-	border: 3px solid #00b33c;
+	background-color:var(--accent-color);
+	border: 3px solid var(--accent-color);
 	font-weight: bold;
 	width: auto;
 	padding: 0.5em;
@@ -166,7 +178,7 @@ form.contact input[type=submit]:disabled {
 }
 
 .notification.success {
-	border: 4px solid #00b33c;
+	border: 4px solid var(--accent-color);
 	background-color: #efe;
 }
 
