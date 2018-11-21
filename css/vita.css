@@ -43,36 +43,30 @@ ul {
 	list-style-type: none;
 }
 
-h1 {
-	font-family: 'Libre Baskerville', serif;
-	font-size: 1.9em;
-	margin-top: 1em;
-}
-
 header {
 	position: relative;
 	overflow:hidden;
 }
 
 header h1 {
+	font-family: 'Libre Baskerville', serif;
 	font-size: 2.2em; 
-}
-
-section h3 {
-	font-weight: bold;
+	margin-top: 1em;
 }
 
 section h2 {
+	font-family: 'Libre Baskerville', serif;
+	font-size: 1.9em;
+	margin-top: 1em;
+}
+
+section h3 {
 	font-size: 1.55em;
 	color: var(--accent-color);
 }
 
-footer {
-	background-color: var(--font-color);
-	color: #fff;
-	width:100%;
-	padding: 3px;
-	margin-top: 2em;
+section h4 {
+	font-weight: bold;
 }
 
 main {
@@ -115,10 +109,6 @@ div.experience aside ul {
 
 div.experience div.description {
 	display: inline;
-}
-
-div.experience div.description h3 {
-	margin-top: 0.5em;
 }
 
 div.experience + div.experience {
@@ -204,7 +194,7 @@ form.contact input[type=submit]:disabled {
 		page-break-before: always;
 	}
 
-	h1, h2, h3 {
+	h2, h3, h4 {
 		page-break-after: avoid;
 	}
 
