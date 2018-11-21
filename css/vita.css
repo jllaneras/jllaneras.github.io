@@ -91,6 +91,13 @@ div.experience {
 	margin-left: 1em;
 }
 
+/* Clear fix hack:https://stackoverflow.com/questions/211383/what-methods-of-clearfix-can-i-use */  
+div.experience::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
 div.experience aside {
 	resize: none;
 	margin-right: 1em;
@@ -131,14 +138,6 @@ div.experience + div.experience {
 	font-weight: bold;
 	margin-bottom: 1em;
 	cursor: pointer;
-}
-
-section#studies {
-	overflow: hidden;
-}
-
-section#experience div.experience {
-	overflow: hidden;
 }
 
 section#contact {
@@ -203,6 +202,14 @@ form.contact input[type=submit]:disabled {
 	.page-break	{
 		display: block;
 		page-break-before: always;
+	}
+
+	h1, h2, h3 {
+		page-break-after: avoid;
+	}
+
+	aside {
+		page-break-inside: avoid;
 	}
 
 	.js section#experience button.read-more {
