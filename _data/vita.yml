@@ -1,0 +1,114 @@
+---
+header: Hi, I'm Pep Llaneras
+
+introduction: >
+    This is my online curriculum vitae. I'm a software developer living in
+    Brussels, Belgium. I've been working professionally on software
+    development since 2007. You can have a look below for more details and
+    feel free to [contact me](#contact) if you're interested in
+    my profile.
+
+experience:
+    - title: DevOps Engineer @ ING Belgium
+      start: May 2015
+      end: Nov 2017
+      location: Brussels (Belgium)
+      sector: Banking
+      website: "[ing.be](https://www.ing.be)"
+      short_description: >
+          Building the Home'Bank private website for retail customers
+      long_description: |
+          ING Belgium is the Belgian subsidiary of the ING Group, an
+          international banking company.
+
+          My team was in charge of revamping Home'Bank, the retail
+          customer website, using modern technologies. We also used Agile
+          practices, like the Scrum methodology, continuous delivery,
+          pair programming, code reviews, etc. I worked on the home page
+          of the Home'Bank website where the customers can check the
+          status of their accounts. I also worked on the Investments and
+          User Settings web applications.
+
+          Even though I helped a bit with everything, my primary role in
+          the team was to create the necessary REST APIs that integrate
+          with multiple back-end services, cache the data when possible,
+          and serve it in a convenient format to front-end applications
+          running in the web browser.
+
+    - title: Full Stack Web Developer @ European Schoolnet
+      start: Apr 2012
+      end: May 2015
+      location: Brussels (Belgium)
+      sector: Education
+      website: "[eun.org](http://www.eun.org)"
+      short_description: >
+          Building web applications and services to support the network of
+          European Ministries of Education
+      long_description: |
+          European Schoolnet is a network of 31 European Ministries of
+          Education. As a non-profit organization, it aims to bring
+          innovation in teaching and learning to its key stakeholders:
+          Ministries of Education, schools, teachers, researchers and
+          industry partners.
+
+          I was part of the technical team dedicated to support the other
+          teams in the organization, composed of about 80 people. We created
+          and maintained the necessary infrastructure, tools and web
+          applications that enabled us to, not only sustain the network of
+          European Ministries of Education, but also to develop websites and
+          web applications for the European Commission and some industry
+          partners.
+
+          I worked both as front-end and back-end web developer.
+
+    - title: Full Stack Web Developer @ 3digits
+      start: Jun 2007
+      end: Apr 2012
+      location: Palma (Spain)
+      sector: Software consultancy
+      website: "[3digits.es](http://www.3digits.es)"
+      short_description: >
+          Building a wide variety of intranet and extranet applications
+          mainly for the public administration but also for private
+          companies
+      long_description: |
+          3digits focuses mainly on developing software projects for the
+          public administration of the Balearic Islands (Spain), even though
+          I also worked on projects for international companies (like
+          [Hotelbeds](https://corporate.hotelbeds.com/about)) and for
+          smaller local companies as well (e.g. online shops).
+
+          Among other projects, we also open sourced
+          [IBKey-Device-Manager](http://ibkey.sourceforge.net/?idioma=en_EN),
+          a Java library to abstract away the access to digital certificates
+          contained in different device types and the generation and
+          verification of digital signatures used in web applications we
+          developed for the public administration.
+
+          During my job at 3digits I worked on a wide range of projects
+          covering all the phases of the software life cycle: planning,
+          implementation, testing, documentation , deployment and
+          maintenance.
+
+studies:
+    - title: Master's degree in Computer Science
+      start: Oct 2002
+      end: Oct 2007
+      location: Palma (Spain)
+      institution: University of the Balearic Islands
+      website: "[uib.eu](http://www.uib.eu)"
+
+languages: |
+    * I speak and write fluently in **English**, **Catalan** and **Spanish**
+    * I have a basic level of written and spoken **French** and **Dutch**
+
+interests: |
+    * Free Software & Open Source
+    * GNU/Linux
+    * Learning
+    * Sustainability
+    * DIY
+
+
+
+...
