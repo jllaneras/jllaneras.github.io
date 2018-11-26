@@ -1,7 +1,7 @@
 ---
 header: Hi, I'm Pep Llaneras
 
-introduction: >
+introduction: >-
     This is my online curriculum vitae. I'm a software developer living in
     Brussels, Belgium. I've been working professionally on software
     development since 2007. You can have a look below for more details and
@@ -15,9 +15,9 @@ experience:
       location: Brussels (Belgium)
       sector: Banking
       website: "[ing.be](https://www.ing.be)"
-      short_description: >
+      short_description: >-
           Building the Home'Bank private website for retail customers
-      long_description: |
+      long_description: |-
           ING Belgium is the Belgian subsidiary of the ING Group, an
           international banking company.
 
@@ -41,10 +41,10 @@ experience:
       location: Brussels (Belgium)
       sector: Education
       website: "[eun.org](http://www.eun.org)"
-      short_description: >
+      short_description: >-
           Building web applications and services to support the network of
           European Ministries of Education
-      long_description: |
+      long_description: |-
           European Schoolnet is a network of 31 European Ministries of
           Education. As a non-profit organization, it aims to bring
           innovation in teaching and learning to its key stakeholders:
@@ -67,11 +67,11 @@ experience:
       location: Palma (Spain)
       sector: Software consultancy
       website: "[3digits.es](http://www.3digits.es)"
-      short_description: >
+      short_description: >-
           Building a wide variety of intranet and extranet applications
           mainly for the public administration but also for private
           companies
-      long_description: |
+      long_description: |-
           3digits focuses mainly on developing software projects for the
           public administration of the Balearic Islands (Spain), even though
           I also worked on projects for international companies (like
@@ -98,17 +98,15 @@ studies:
       institution: University of the Balearic Islands
       website: "[uib.eu](http://www.uib.eu)"
 
-languages: |
+languages: |-
     * I speak and write fluently in **English**, **Catalan** and **Spanish**
     * I have a basic level of written and spoken **French** and **Dutch**
 
-interests: |
+interests: |-
     * Free Software & Open Source
     * GNU/Linux
     * Learning
     * Sustainability
     * DIY
-
-
 
 ...
