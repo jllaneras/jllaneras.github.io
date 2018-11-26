@@ -21,7 +21,7 @@ layout: default
                 <li><i class="far fa-calendar" aria-hidden="true" title="Dates"></i> {{ job.start }} &rArr; {{ job.end }}</li>
                 <li><i class="fas fa-globe-americas" aria-hidden="true" title="Location"></i> {{ job.location }}</li>
                 <li><i class="far fa-building" aria-hidden="true" title="Business"></i> {{ job.sector }}</li>
-                <li><i class="fas fa-link" aria-hidden="true" title="Website"></i> {{ job.website | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+                <li><i class="fas fa-link" aria-hidden="true" title="Website"></i> {{ job.website | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }}</li>
             </ul>
         </aside>
         <div class="description">
@@ -47,11 +47,12 @@ layout: default
                 <li><i class="far fa-calendar" aria-hidden="true" title="Dates"></i> {{ study.start }} &rArr; {{ study.end }} </li>
                 <li><i class="fas fa-globe-americas" aria-hidden="true" title="Location"></i> {{ study.location }}<li>
                 <li><i class="far fa-building" aria-hidden="true" title="Business"></i> {{ study.institution }}</li>
-                <li><i class="fas fa-link" aria-hidden="true" title="Website"></i> {{study.website | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+                <li><i class="fas fa-link" aria-hidden="true" title="Website"></i> {{study.website | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }}</li>
             </ul>
         </aside>
     </div>
     {%- endfor -%}
+
 </section>
 
 <section>
