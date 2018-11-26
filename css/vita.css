@@ -138,6 +138,12 @@ form.contact {
 	margin-left: 1em;
 }
 
+form.contact label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.3em;
+}
+
 form.contact input,textarea {
 	margin-bottom: 10px;
 	padding: 7px;
