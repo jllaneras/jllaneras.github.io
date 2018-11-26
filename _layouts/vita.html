@@ -7,7 +7,7 @@ layout: default
     <ul class="contact-data">
         <li class="contact-link"><i class="fas fa-envelope" aria-hidden="true" title="email"></i> <a href="#contact">Contact</a></li>
     </ul>
-    <p>{{ site.data.vita.introduction }}</p>
+    {{ site.data.vita.introduction | markdownify }}
 </header>
 
 <section id="experience">
