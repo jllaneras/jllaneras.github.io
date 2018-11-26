@@ -1,13 +1,13 @@
 /* =Reset
 -------------------------------------------------------------- */
- 
+
 * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	margin-top: 0;
 }
- 
+
 html, body, div {
 	margin: 0;
 	padding: 0;
@@ -30,7 +30,7 @@ p + p {
 
 :root {
 	--font-color: #333;
-	--accent-color: #00aa55;
+	--accent-color: #1b813e;
 }
 
 html * {
@@ -50,7 +50,7 @@ header {
 
 header h1 {
 	font-family: 'Libre Baskerville', serif;
-	font-size: 2.2em; 
+	font-size: 2.2em;
 	margin-top: 1em;
 }
 
@@ -85,7 +85,7 @@ div.experience {
 	margin-left: 1em;
 }
 
-/* Clear fix hack:https://stackoverflow.com/questions/211383/what-methods-of-clearfix-can-i-use */  
+/* Clear fix hack:https://stackoverflow.com/questions/211383/what-methods-of-clearfix-can-i-use */
 div.experience::after {
 	content: "";
 	display: block;
@@ -121,9 +121,9 @@ div.experience + div.experience {
 
 .js section#experience button.read-more {
 	display: inline;
-	border: 3px solid var(--accent-color);
+	border: 3px solid var(--font-color);
 	color: white;
-	background-color: var(--accent-color);
+	background-color: var(--font-color);
 	padding: 0.5em;
 	font-weight: bold;
 	margin-bottom: 1em;
@@ -184,7 +184,7 @@ form.contact input[type=submit]:disabled {
 	clear: both;
 }
 
-.hidden { 
+.hidden {
 	display: none;
 }
 
@@ -205,7 +205,7 @@ form.contact input[type=submit]:disabled {
 	.js section#experience button.read-more {
 		display: none;
 	}
-	
+
 	.js section#experience div.experience div.description p {
 		display: block;
 	}
@@ -221,7 +221,7 @@ form.contact input[type=submit]:disabled {
 }
 
 @media screen and (max-width: 479px) {
-	/* CSS for small screens */	
+	/* CSS for small screens */
 	section#experience div.experience aside {
 		float: none;
 		display: block;
@@ -238,4 +238,3 @@ form.contact input[type=submit]:disabled {
 
 
 }
-
