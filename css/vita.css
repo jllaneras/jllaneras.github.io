@@ -29,14 +29,19 @@ p + p {
 -------------------------------------------------------------- */
 
 :root {
-	--font-color: #333;
+    --background-color: white;
+	--foreground-color: #333;
 	--accent-color: #1b813e;
 }
 
 html * {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 100%;
-	color: var(--font-color);
+	color: var(--foreground-color);
+}
+
+body {
+    background-color: var(--background-color)
 }
 
 ul {
@@ -121,9 +126,9 @@ div.experience + div.experience {
 
 .js section#experience button.read-more {
 	display: inline;
-	border: 3px solid var(--font-color);
-	color: white;
-	background-color: var(--font-color);
+	border: 3px solid var(--foreground-color);
+	color: var(--background-color);
+	background-color: var(--foreground-color);
 	padding: 0.5em;
 	font-weight: bold;
 	margin-bottom: 1em;
@@ -152,7 +157,7 @@ form.contact input,textarea {
 }
 
 form.contact input[type=submit] {
-	color: white;
+	color: var(--background-color);
 	background-color:var(--accent-color);
 	border: 3px solid var(--accent-color);
 	font-weight: bold;
