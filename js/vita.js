@@ -7,10 +7,10 @@ VITA.showJobDescription = function (event) {
 	event.preventDefault();
 	var description = event.target.parentNode;
 
-	// FIXME: Not sure all browsers implement forEach below
-	description.querySelectorAll("p").forEach(function(p) {
-		p.style.display = "block";
-	});
+	var ps = description.querySelectorAll("p");
+	for (var i = 0; i < ps.length; i++) {
+  		ps[i].style.display = "block";
+	}
 
 	description.removeChild(description.querySelector("button.read-more"));
 }
@@ -51,11 +51,10 @@ VITA.sendEmail = function(event) {
 }
 
 window.onload = function() {
-	
-	document.querySelectorAll("section#experience button.read-more")
-		.forEach(function(element) {
-			element.addEventListener("click", VITA.showJobDescription);	
-		});
+	var readMoreButtons = document.querySelectorAll("section#experience button.read-more");
+	for (var i = 0; i < readMoreButtons.length; i++) {
+		readMoreButtons[i].addEventListener("click", VITA.showJobDescription);
+	}
 
 	document.getElementById("contact-form").addEventListener("submit", VITA.sendEmail, true);
 
