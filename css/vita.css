@@ -174,6 +174,7 @@ form.contact input[type=submit]:disabled {
 .notification {
 	padding: 1em;
 	font-weight: bold;
+	margin-left: 1em;
 	margin-bottom: 1em;
 }
 
@@ -187,6 +188,28 @@ form.contact input[type=submit]:disabled {
 	background-color: #fee;
 }
 
+#contact-form-loading {
+	margin-left: 1em;
+	margin-bottom: 1em;
+	color: #aaa;
+}
+
+.js #enable-js {
+	display: none;
+}
+
+.no-js #contact-form {
+	display: none;
+}
+
+.grecaptcha-disclaimer {
+	margin-bottom: 1em;
+	color: #aaa;
+}
+
+.grecaptcha-badge {
+    display: none;
+}
 .page-break	{
 	display: none;
 }
@@ -246,6 +269,5 @@ form.contact input[type=submit]:disabled {
 	form.contact input[type=submit] {
 		width: 100%;
 	}
-
 
 }

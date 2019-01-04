@@ -20,13 +20,16 @@ description: >- # this means to ignore newlines until "baseurl:"
   online curriculum vitae.
 
 baseurl: ""
-url: "https://www.jmln.me"
+url: https://www.jmln.me
 
-google_analytics: UA-129424616-1
+google_analytics_key: UA-129424616-1
+google_recaptcha_key: 6LcLDIYUAAAAAMLQB3RatUjJjIJ_Rdr2ChD1oayV
 
 webmaster_verifications:
     google: M1oWh2JlURq4MLR_1goB5X9Cw_C_Ck-KG9Wgni9v7jU
     bing: A1835DE6E76EA89335FCA5CC89C93C51
+
+contact_form_server_url: https://4b212hze59.execute-api.eu-west-1.amazonaws.com/prod
 
 # Build settings
 markdown: kramdown

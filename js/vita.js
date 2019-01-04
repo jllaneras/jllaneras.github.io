@@ -2,8 +2,7 @@
 
 var VITA = VITA || {};
 
-
-VITA.showJobDescription = function (event) {
+VITA.showJobDescription = function(event) {
 	event.preventDefault();
 	var description = event.target.parentNode;
 
@@ -15,10 +14,17 @@ VITA.showJobDescription = function (event) {
 	description.removeChild(description.querySelector("button.read-more"));
 }
 
-VITA.sendEmail = function(event) {
-	event.preventDefault();
+VITA.initReadMoreButtons = function() {
+	var readMoreButtons = document.querySelectorAll("section#experience button.read-more");
+	for (var i = 0; i < readMoreButtons.length; i++) {
+		readMoreButtons[i].addEventListener("click", VITA.showJobDescription);
+	}
+}
 
-	var form = document.getElementById("contact-form"); 
+VITA.sendEmail = function() {
+	document.getElementById("message-not-sent").classList.add("hidden");
+
+	var form = document.getElementById("contact-form");
 	var submitButton = form.querySelector("input[type=submit]");
 	submitButton.disabled = true;
 	submitButton.value = "Sending email..."
@@ -40,23 +46,22 @@ VITA.sendEmail = function(event) {
 		if(http.readyState == 4 && http.status == 200) {
 			form.style.display = "none";
 			document.getElementById("message-sent").classList.remove("hidden");
+			document.getElementById("message-not-sent").classList.add("hidden");
 		} else if (http.status != 200) {
-			document.getElementById("message-not-sent").classList.remove("hidden");
-			submitButton.disabled = false;
-			submitButton.value = "Try again";
+			VITA.onSendEmailError();
 		}
 	}
 
 	http.send(params);
 }
 
-window.onload = function() {
-	var readMoreButtons = document.querySelectorAll("section#experience button.read-more");
-	for (var i = 0; i < readMoreButtons.length; i++) {
-		readMoreButtons[i].addEventListener("click", VITA.showJobDescription);
-	}
+VITA.onSendEmailError = function() {
+	var form = document.getElementById("contact-form");
+	var submitButton = form.querySelector("input[type=submit]");
 
-	document.getElementById("contact-form").addEventListener("submit", VITA.sendEmail, true);
-
+	document.getElementById("message-not-sent").classList.remove("hidden");
+	submitButton.disabled = false;
+	submitButton.value = "Try again";
 }
 
+window.addEventListener("load", VITA.initReadMoreButtons, false);
