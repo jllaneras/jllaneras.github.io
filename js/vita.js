@@ -1,6 +1,6 @@
 "use strict";
 
-var VITA = VITA || {};
+var VITA = {};
 
 
 VITA.showJobDescription = function (event) {
@@ -18,15 +18,21 @@ VITA.showJobDescription = function (event) {
 VITA.sendEmail = function(event) {
 	event.preventDefault();
 
-	var form = document.getElementById("contact-form"); 
+	var form = document.getElementById("contact-form");
 	var submitButton = form.querySelector("input[type=submit]");
 	submitButton.disabled = true;
 	submitButton.value = "Sending email..."
 
+	function isAnUncheckedCheckbox(field ) {
+		return field.type == 'checkbox' && !field.checked;
+	}
+
 	var q = [];
 	for (var i = 0; i < form.elements.length; i++) {
 		var field = form.elements[i];
-		 q.push(field.name + "=" + encodeURIComponent(field.value));
+		if (!field.disabled && !isAnUncheckedCheckbox(field)){
+			q.push(field.name + "=" + encodeURIComponent(field.value));
+		}
 	}
 
 	var http = new XMLHttpRequest();
@@ -59,4 +65,3 @@ window.onload = function() {
 	document.getElementById("contact-form").addEventListener("submit", VITA.sendEmail, true);
 
 }
-

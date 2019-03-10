@@ -1,13 +1,32 @@
-<div id="message-sent" class="notification success hidden">Thanks for your email! I'll get back to you soon.</div>
-<div id="message-not-sent" class="notification failure hidden">I'm sorry, there was a problem sending your email. Please try later.</div>
-<form id="contact-form" method="POST" action="https://www.enformed.io/20urryaq" class="contact">
+<div id="message-sent" class="notification success hidden">
+    Thanks for your email! I'll get back to you soon.
+</div>
+<div id="message-not-sent" class="notification failure hidden">
+    I'm sorry, there was a problem sending your email. Please try later.
+</div>
+<form id="contact-form"  class="contact" method="POST"
+        action="{{ site.contact_form_server_url }}">
     <ul>
-        <li><label for="your-name">Your name</label> <input id="your-name" type="text" name="name" placeholder="What's your name?" required /></li>
-        <li><label for="your-email">Your email</label> <input id="your-email" type="email" name="email" placeholder="Where should I write back?" required /></li>
-        <li><label for="your-message">Your message</label> <textarea id="your-message" name="message" rows="4" placeholder="Please type your message here." required></textarea></li>
+        <li>
+            <label for="your-name">Your name</label>
+            <input id="your-name" type="text" name="name"
+                placeholder="What's your name?" required />
+        </li>
+        <li>
+            <label for="your-email">Your email</label>
+            <input id="your-email" type="email" name="email"
+                placeholder="Where should I write back?" required />
+        </li>
+        <li>
+            <label for="your-message">Your message</label>
+            <textarea id="your-message" name="message" rows="4"
+                placeholder="Please type your message here." required></textarea>
+        </li>
+        <li class="hidden">
+            <input id="bender-check" type="checkbox" name="bender-check" value="true" />
+            <label for="bender-check">Please check this checkbox if you're
+                a robot so I can skip your email</label>
+        </li>
         <li><input type="submit" value="Send email" /></li>
     </ul>
-    <input type="hidden" name="*subject" value="jmln.me|contact" />
-    <input type="hidden" name="*reply" value="email" />
-    <input type="hidden" name="*honeypot" />
 </form>

@@ -28,6 +28,8 @@ webmaster_verifications:
     google: M1oWh2JlURq4MLR_1goB5X9Cw_C_Ck-KG9Wgni9v7jU
     bing: A1835DE6E76EA89335FCA5CC89C93C51
 
+contact_form_server_url: https://4b212hze59.execute-api.eu-west-1.amazonaws.com/prod
+
 # Build settings
 markdown: kramdown
 
