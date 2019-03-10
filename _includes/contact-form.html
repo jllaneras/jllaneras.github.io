@@ -1,13 +1,73 @@
-<div id="message-sent" class="notification success hidden">Thanks for your email! I'll get back to you soon.</div>
-<div id="message-not-sent" class="notification failure hidden">I'm sorry, there was a problem sending your email. Please try later.</div>
-<form id="contact-form" method="POST" action="https://www.enformed.io/20urryaq" class="contact">
+<script>
+
+</script>
+<div id="message-sent" class="notification success hidden">
+    Thanks for your email! I'll get back to you soon.
+</div>
+<div id="message-not-sent" class="notification failure hidden">
+    I'm sorry, there was a problem sending your email. Please try later.
+</div>
+<div id="enable-js" class="notification failure">
+    Unfortunately JavaScript is required to load the contact form captcha. Please
+    <a href="https://enablejavascript.co">enable JavaScript in your browser</a>
+    and refresh the page to be able to contact me.
+</div>
+<div id="contact-form-loading">
+    The contact form is still loading... If it doesn't load soon please
+    try refreshing the page.
+</div>
+<form id="contact-form" method="POST" class="contact hidden"
+        action="{{ site.contact_form_server_url }}">
     <ul>
         <li><label for="your-name">Your name</label> <input id="your-name" type="text" name="name" placeholder="What's your name?" required /></li>
         <li><label for="your-email">Your email</label> <input id="your-email" type="email" name="email" placeholder="Where should I write back?" required /></li>
         <li><label for="your-message">Your message</label> <textarea id="your-message" name="message" rows="4" placeholder="Please type your message here." required></textarea></li>
+        <li class="grecaptcha-disclaimer">This contact form is protected by reCAPTCHA and the Google
+            <a tabindex="-1" href="https://policies.google.com/privacy">Privacy Policy</a> and
+            <a tabindex="-1" href="https://policies.google.com/terms">Terms of Service</a> apply.
+        </li>
         <li><input type="submit" value="Send email" /></li>
     </ul>
-    <input type="hidden" name="*subject" value="jmln.me|contact" />
-    <input type="hidden" name="*reply" value="email" />
-    <input type="hidden" name="*honeypot" />
+
+    <div class="g-recaptcha"
+              data-sitekey="{{ site.google_recaptcha_key }}"
+    		  data-callback="gRecaptchaSuccessCallback"
+              data-expired-callback="gRecaptchaExpiredCallback"
+              data-error-callback="gRecaptchaErrorCallback"
+              data-size="invisible"
+              data-badge="inline">
+    </div>
 </form>
+
+<script>
+    function gRecaptchaCheck(event) {
+        event.preventDefault();
+        if (grecaptcha.getResponse() == "") {
+            grecaptcha.execute()
+        } else {
+            // The reCAPTCHA was already completed
+            gRecaptchaSuccessCallback()
+        }
+    }
+
+    function gRecaptchaSuccessCallback() {
+        VITA.sendEmail();
+    }
+
+    function gRecaptchaExpiredCallback() {
+        grecaptcha.reset()
+    }
+
+    function gRecaptchaErrorCallback() {
+        VITA.onSendEmailError();
+    }
+
+    VITA.initContactForm = function() {
+        var contactForm = document.getElementById("contact-form");
+    	contactForm.addEventListener("submit", gRecaptchaCheck, true);
+    	document.getElementById("contact-form-loading").className = "hidden";
+    	contactForm.classList.remove("hidden")
+    }
+
+    window.addEventListener("load", VITA.initContactForm, false);
+</script>

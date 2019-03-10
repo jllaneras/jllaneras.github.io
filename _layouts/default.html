@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,10 +8,12 @@
     		{%- include google-analytics.html -%}
   		{%- endif -%}
 
-		<script src="js/vita.js"></script>
 		<script>
-			document.documentElement.className = "js";
+			document.documentElement.classList.remove("no-js");
+			document.documentElement.classList.add("js");
 		</script>
+		<script src="js/vita.js"></script>
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 		<link rel="stylesheet" type="text/css"
 		      href="https://fonts.googleapis.com/css?family=Open+Sans%7COpen+Sans:regular,bold%7CRoboto%7CLibre+Baskerville">
