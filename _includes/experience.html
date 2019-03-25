@@ -1,0 +1,22 @@
+<div class="experience">
+    <h3>{{ include.title }}</h3>
+    <aside>
+        <ul>
+            <li><i class="far fa-calendar" aria-hidden="true" title="Dates"></i> {{ include.start }} &rArr; {{ include.end }}</li>
+            <li><i class="fas fa-globe-americas" aria-hidden="true" title="Location"></i> {{ include.location }}</li>
+            <li><i class="far fa-building" aria-hidden="true" title="Business"></i> {{ include.sector }}</li>
+            <li><i class="fas fa-link" aria-hidden="true" title="Website"></i> {{ include.website | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }}</li>
+        </ul>
+    </aside>
+
+    {% if include.short_description %}
+    <div class="description">
+        <h4>{{ include.short_description }}</h4>
+
+        {% if include.long_description %}
+        <button class="read-more hidden">Read more</button>
+        {{ include.long_description | markdownify }}
+        {% endif %}
+    </div>
+    {% endif %}
+</div>

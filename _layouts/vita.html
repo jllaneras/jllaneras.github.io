@@ -12,47 +12,30 @@ layout: default
 
 <section id="experience">
     <h2>Experience</h2>
-
     {%- for job in site.data.vita.experience -%}
-    <div class="experience">
-        <h3>{{ job.title }}</h3>
-        <aside>
-            <ul>
-                <li><i class="far fa-calendar" aria-hidden="true" title="Dates"></i> {{ job.start }} &rArr; {{ job.end }}</li>
-                <li><i class="fas fa-globe-americas" aria-hidden="true" title="Location"></i> {{ job.location }}</li>
-                <li><i class="far fa-building" aria-hidden="true" title="Business"></i> {{ job.sector }}</li>
-                <li><i class="fas fa-link" aria-hidden="true" title="Website"></i> {{ job.website | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }}</li>
-            </ul>
-        </aside>
-        <div class="description">
-            <h4>{{ job.short_description }}</h4>
-
-            <button class="read-more hidden">Read more</button>
-
-            {{ job.long_description | markdownify }}
-        </div>
-    </div>
+        {%- include experience.html
+            title = job.title
+            start = job.start
+            end = job.end
+            location = job.location
+            sector = job.sector
+            website = job.website
+            short_description = job.short_description
+            long_description = job.long_description -%}
     {%- endfor -%}
-
 </section>
 
 <section id="studies">
     <h2>University studies</h2>
-
     {%- for study in site.data.vita.studies -%}
-    <div class="experience">
-        <h3>{{ study.title }}</h3>
-        <aside>
-            <ul>
-                <li><i class="far fa-calendar" aria-hidden="true" title="Dates"></i> {{ study.start }} &rArr; {{ study.end }} </li>
-                <li><i class="fas fa-globe-americas" aria-hidden="true" title="Location"></i> {{ study.location }}<li>
-                <li><i class="far fa-building" aria-hidden="true" title="Business"></i> {{ study.institution }}</li>
-                <li><i class="fas fa-link" aria-hidden="true" title="Website"></i> {{study.website | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }}</li>
-            </ul>
-        </aside>
-    </div>
+        {%- include experience.html
+            title = study.title
+            start = study.start
+            end = study.end
+            location = study.location
+            sector = study.institution
+            website = study.website -%}
     {%- endfor -%}
-
 </section>
 
 <section>
@@ -67,7 +50,6 @@ layout: default
     <div class="experience">
         {{ site.data.vita.interests | markdownify }}
     </div>
-
 </section>
 
 <section id="contact">
