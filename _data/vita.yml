@@ -9,6 +9,23 @@ introduction: >-
     my profile.
 
 experience:
+    - title: Software Consultant @ ADNEOM
+      start: Jan 2019
+      end: Present
+      location: Brussels (Belgium)
+      sector: Software Consultancy
+      website: "[adneom.com](https://www.adneom.com)"
+      short_description: >-
+          Partnering with other companies on their business journey and helping
+          them make the right technical choices.
+      long_description: |-
+          ADNEOM is an international consultancy specialised in web, mobile,
+          software development, digital factory and security solutions.
+
+          As sotware consultant, my role is to help other companies achieve
+          their business goals by understanding their needs and putting into 
+          place software solutions that match their unique context.
+
     - title: DevOps Engineer @ ING Belgium
       start: May 2015
       end: Nov 2017
