@@ -9,18 +9,19 @@ introduction: >-
     my profile.
 
 experience:
-    - title: Software Consultant @ ADNEOM
+    - title: Software Consultant @ Positive Thinking Company
       start: Jan 2019
       end: Present
       location: Brussels (Belgium)
       sector: Software Consultancy
-      website: "[adneom.com](https://www.adneom.com)"
+      website: "[positivethinking.tech](https://positivethinking.tech)"
       short_description: >-
           Partnering with other companies on their business journey and helping
           them make the right technical choices.
       long_description: |-
-          ADNEOM is an international consultancy specialised in web, mobile,
-          software development, digital factory and security solutions.
+          Positive Thinking Company is an international consultancy specialised in
+          apps & platforms, security, cloud, data & analytics, hyperautomation and
+          digital workplace.
 
           As sotware consultant, my role is to help other companies achieve
           their business goals by understanding their needs and putting into 
