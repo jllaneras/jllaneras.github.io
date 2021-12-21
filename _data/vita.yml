@@ -1,31 +1,117 @@
 ---
 header: Hi, I'm Pep Llaneras
 
-introduction: >-
-    This is my curriculum vitae. I'm a software developer living in
-    Brussels, Belgium. I've been working professionally on software
-    development since 2007. You can have a look below for more details and
-    feel free to [contact me](#contact) if you're interested in
-    my profile.
+introduction: |-
+    This is my curriculum vitae. I'm a software developer living in Brussels,
+    Belgium. I've been working professionally on software development since 2007.
+    I have a master degree in Computer Science and I'm passionate about
+    open source and free software (free as in freedom, not free as in "free
+    beer").
+    
+    You can have a look below for more details and feel free to [contact
+    me](#contact) if you're interested in my profile.
 
 experience:
-    - title: Software Consultant @ Positive Thinking Company
-      start: Jan 2019
+    - title: Software Consultant @ Ion Beam Applications
+      start: May 2021
       end: Present
       location: Brussels (Belgium)
-      sector: Software Consultancy
-      website: "[positivethinking.tech](https://positivethinking.tech)"
+      sector: Proton Therapy
+      website: "[iba-worldwide.com](https://www.iba-worldwide.com)"
       short_description: >-
-          Partnering with other companies on their business journey and helping
-          them make the right technical choices.
+          Python development for Proton Therapy R&D.
       long_description: |-
-          Positive Thinking Company is an international consultancy specialised in
-          apps & platforms, security, cloud, data & analytics, hyperautomation and
-          digital workplace.
+          Ion Beam Applications (IBA) is an international company providing
+          Proton Therapy Systems (PTS) to treat cancer.
 
-          As sotware consultant, my role is to help other companies achieve
-          their business goals by understanding their needs and putting into 
-          place software solutions that match their unique context.
+          As a software consultant, I'm currently working mainly as a solo
+          developer, in collaboration with the hardware teams, building
+          software for PTS R&D projects.
+
+          The goal of the first project on which I worked was to gather raw
+          signal data from the PTS cyclotron, process it, run different
+          analysis, an publish the results to Splunk, for monitoring and data
+          analysis purposes.  This project was developed with Python.  The main
+          challenge was the amount of data to process. For that, I used
+          different Python processes using the multiprocessing Python module
+          and shared memory for IPC, and to avoid duplication of data in RAM. I
+          used docker and systemd to deploy and run the software.
+
+          Another project I just started working on is a Qt Python desktop
+          application to characterize radio frequency signals. The goal of the
+          project is to develop a solution to calibrate PTS systems during
+          installation/maintenance in an automated way.
+
+          Technologies that I'm currently using at IBA are for example: Python,
+          Qt, systemd, Numpy, Pandas, CherrPy, Splunk, PostgreSQL, Docker,
+          Java, Spring and Ubuntu.
+
+
+    - title: Software Consultant @ ENGIE Laborelec
+      start: May 2019
+      end: May 2021
+      location: Brussels (Belgium)
+      sector: Street Lighting
+      website: "[laborelec.com](https://www.laborelec.com)"
+      short_description: >-
+          Python development for Street Lighting R&D.
+      long_description: |-
+          Laborelec is a Belgian research centre owned by
+          [ENGIE](https://www.engie.com/en), a French multinational utility
+          company.
+
+          As a software consultant, I was in charge of building software for
+          several R&D projects run by the Street Lighting department of
+          Laborelec. In this mission, I worked mainly as a solo developer,
+          rather than in a team.
+
+          The first project on which I worked was code-named LightBox. For this
+          project I shipped a desktop application, developed in Python and Qt,
+          to make quality controls on batches of street lighting lamps bought by
+          ENGIE.
+
+          Another project was the Street Lighting Inventory. In this project I
+          delivered a GIS application to gather and process geolocalization and
+          spectral data from street lighting in urban areas and inter-city
+          roads. The application was based on QGIS. Raw data was loaded to a
+          PostgreSQL database with bash scripts and the data processing was done
+          with stored procedures and the PostGIS database extension.
+
+          Some technologies I used while working at Laborelec were: Python,
+          Qt, Flask, pytest, pyinstaller, Git, Bash, Elastic Search, Kafka,
+          Docker, Postgres, PostGIS and Ubuntu.
+          
+    - title: Software Consultant @ AGC Glass
+      start: Jan 2019
+      end: Apr 2019
+      location: Brussels (Belgium)
+      sector: Glass manufacturing
+      website: "[agc.com](https://www.agc.com/en)"
+      short_description: >-
+          Setting up a software factory for AGC Glass.
+      long_description: |-
+          As a software consultant, I led a team of 5 people to set up a
+          a software factory for Glass division of the AGC group, one of the
+          worldwide leaders in glass production and manufacturing.
+
+          We set up a continuous integration pipeline with GitLab integrated
+          with Jira, and worked on a proof-of-concept project to demonstrate
+          a typical Agile workflow. We set up a Kanban board on
+          Jira to define user stories, derive tasks from them, and automatically
+          open Gitlab merge requests. Code pushed to the Git repository would
+          be tested against a set of unit and integration tests. It was also
+          scanned with static analysis tools like Sonar, application versioning
+          was also automated with Gitlab and binaries were stored in a binary
+          repository.
+
+          Regarding the proof-of-concept project to show case the software
+          factory, we shipped a templatable CRUD web application and a Java
+          backend supporting different databases (PostgreSQL, MySQL, Oracle and
+          SQL Server) as the storage layer.
+
+          The technology stack we used was Spring (Java) and Docker on the
+          back-end. The front-end application was developed with vanilla
+          ES6 Javascript and bundled with webpack and NPM.
 
     - title: DevOps Engineer @ ING Belgium
       start: May 2015
@@ -34,79 +120,92 @@ experience:
       sector: Banking
       website: "[ing.be](https://www.ing.be)"
       short_description: >-
-          Building the Home'Bank private website for retail customers
+          Building the Home'Bank private website for retail customers.
       long_description: |-
           ING Belgium is the Belgian subsidiary of the ING Group, an
           international banking company.
 
           My team was in charge of revamping Home'Bank, the retail
-          customer website, using modern technologies. We also used Agile
+          customer website, using newer technologies. We used Agile
           practices, like the Scrum methodology, continuous delivery,
           pair programming, code reviews, etc. I worked on the home page
           of the Home'Bank website where the customers can check the
           status of their accounts. I also worked on the Investments and
           User Settings web applications.
 
-          Even though I helped a bit with everything, my primary role in
-          the team was to create the necessary REST APIs that integrate
+          Even though I often had the role of lead/facilitator in the team,
+          my primary role was to create the necessary REST APIs that integrate
           with multiple back-end services, cache the data when possible,
           and serve it in a convenient format to front-end applications
           running in the web browser.
 
-    - title: Full Stack Web Developer @ European Schoolnet
+          The back-end stack I implemented was Java-based, following a
+          microservice-style architecture. We also used Kafka as the
+          event bus for some back-ends, and Cassandra mainly as a caching
+          layer.
+
+    - title: Full Stack Developer @ European Schoolnet
       start: Apr 2012
       end: May 2015
       location: Brussels (Belgium)
       sector: Education
       website: "[eun.org](http://www.eun.org)"
       short_description: >-
-          Building web applications and services to support the network of
-          European Ministries of Education
+          Building software to support the network of European Ministries of
+          Education.
       long_description: |-
           European Schoolnet is a network of 31 European Ministries of
-          Education. As a non-profit organization, it aims to bring
-          innovation in teaching and learning to its key stakeholders:
-          Ministries of Education, schools, teachers, researchers and
-          industry partners.
+          Education. As a non-profit organization, it aims to bring innovation
+          in teaching and learning to its key stakeholders: Ministries of
+          Education, schools, teachers, researchers and industry partners.
 
-          I was part of the technical team dedicated to support the other
-          teams in the organization, composed of about 80 people. We created
-          and maintained the necessary infrastructure, tools and web
-          applications that enabled us to, not only sustain the network of
-          European Ministries of Education, but also to develop websites and
-          web applications for the European Commission and some industry
-          partners.
+          I was part of a small technical team of 5 people dedicated to support
+          the other teams in the organization, composed of about 80 people. We
+          created and maintained the necessary web applications that enabled us
+          to, not only sustain the network of European Ministries of Education,
+          but also to develop websites and web applications for the European
+          Commission and some industry partners.
 
-          I worked both as front-end and back-end web developer.
+          As an example, I built web applications for the eTwinning online
+          platform, so that teachers in different countries can organize 
+          online collaboration events.
 
-    - title: Full Stack Web Developer @ 3digits
+          I worked both as front-end and back-end web developer. The back-end
+          stack was Java-based using Servlets/EJBs, often using Oracle or MySQL
+          for storage. The front-end was implemented with plain web
+          technologies.
+
+    - title: Full Stack Developer @ 3digits
       start: Jun 2007
       end: Apr 2012
       location: Palma (Spain)
-      sector: Software consultancy
+      sector: Public administration
       website: "[3digits.es](http://www.3digits.es)"
       short_description: >-
-          Building a wide variety of intranet and extranet applications
-          mainly for the public administration but also for private
-          companies
+          Building software for the public administration.
       long_description: |-
-          3digits focuses mainly on developing software projects for the
-          public administration of the Balearic Islands (Spain), even though
-          I also worked on projects for international companies (like
-          [Hotelbeds](https://corporate.hotelbeds.com/about)) and for
+          3digits focused primarily on developing software projects for the
+          public administration of the Balearic Islands (Spain), like
+          intranet applications and online citizen services.
+          However, I also worked on projects for international companies like
+          [Hotelbeds](https://corporate.hotelbeds.com/about) and for
           smaller local companies as well (e.g. online shops).
 
-          Among other projects, we also open sourced
+          During my job at 3digits I worked on a wide range of projects
+          covering all the phases of the software life cycle: planning,
+          implementation, testing, documentation, deployment and
+          maintenance.
+
+          Back then, one of my favourire projects was to open source
           [IBKey-Device-Manager](http://ibkey.sourceforge.net/?idioma=en_EN),
           a Java library to abstract away the access to digital certificates
           contained in different device types and the generation and
           verification of digital signatures used in web applications we
           developed for the public administration.
 
-          During my job at 3digits I worked on a wide range of projects
-          covering all the phases of the software life cycle: planning,
-          implementation, testing, documentation , deployment and
-          maintenance.
+          The stack I worked with was Java-based. I also maintained
+          Oracle Forms/Reports applications and did lots
+          of database programming in Oracle and MySQL.
 
 studies:
     - title: Master's degree in Computer Science
@@ -119,12 +218,5 @@ studies:
 languages: |-
     * I speak and write fluently in **English**, **Catalan** and **Spanish**
     * I have a basic level of written and spoken **French** and **Dutch**
-
-interests: |-
-    * Free Software & Open Source
-    * GNU/Linux
-    * Learning
-    * Sustainability
-    * DIY
 
 ...
