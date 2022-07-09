@@ -7,25 +7,29 @@
 <form id="contact-form"  class="contact" method="POST"
         action="{{ site.contact_form_server_url }}">
     <ul>
-        <li>
-            <label for="your-name">Your name</label>
-            <input id="your-name" type="text" name="name"
-                placeholder="What's your name?" required />
+        <li class="offscreen">
+	    <label for="name">Your name (if you're made of bits)</label>
+            <input id="name" type="text" name="name" />
+	</li>
+	<li class="offscreen">
+	    <label for="email">Your email (if you're made of bits)</label>
+            <input id="email" type="text" name="email" />
+	</li>
+	<li class="offscreen">
+	    <label for="message">Your message (if you're made of bits)</label>
+	    <input id="message" type="text" name="message" />
         </li>
         <li>
-            <label for="your-email">Your email</label>
-            <input id="your-email" type="email" name="email"
-                placeholder="Where should I write back?" required />
+            <label for="d27b">Your name</label>
+            <input id="d27b" type="text" name="d27b" required />
         </li>
         <li>
-            <label for="your-message">Your message</label>
-            <textarea id="your-message" name="message" rows="4"
-                placeholder="Please type your message here." required></textarea>
+            <label for="30e9">Your email</label>
+            <input id="30e9" type="email" name="30e9" required />
         </li>
-        <li class="hidden">
-            <input id="bender-check" type="checkbox" name="bender-check" value="true" />
-            <label for="bender-check">Please check this checkbox if you're
-                a robot so I can skip your email</label>
+        <li>
+            <label for="da2e">Your message</label>
+            <textarea id="da2e" name="da2e" rows="4" required></textarea>
         </li>
         <li><input type="submit" value="Send email" /></li>
     </ul>
