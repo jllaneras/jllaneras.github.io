@@ -12,9 +12,48 @@ introduction: |-
     me](#contact) if you're interested in my profile.
 
 experience:
+    - title: Software Consultant @ Proton VPN
+      start: May 2022
+      end: Present
+      location: Remote from Brussels (Belgium)
+      sector: VPN services
+      website: "[protonvpn.com](https://protonvpn.com)"
+      short_description: >-
+          Rewriting the Linux app for Proton VPN.
+      long_description: |-
+          Proton VPN is one of the leading VPN providers. Our main focus
+          is on privacy, security and speed.
+
+          As a software consultant, I'm leading the development of the v4
+          Linux app for Proton VPN.
+
+          The v4 app is already used in production. We went from around 4K
+          daily users with the v3 app to currently (data from March 2024)
+          around 22K daily users with the v4 app.        
+
+          The goal when I joined was to do a full rewrite of the v3 app used
+          to connect to any of the thousands of VPN servers distributed around
+          the globe. The main focus when writing the v4 app was its modular design
+          to allows us replacing/swapping its building blocks easily and safely,
+          and to test them independently.
+
+          The full VPN client is written in Python, and the front-end is based
+          on GTK. The VPN connection backends rely on NetworkManager due to its
+          ubiquity in most linux distributions.
+
+          The main challenge of the project is having to support the wide variety
+          of Linux distributions that people is using, which required us to
+          invest heavily on automated testing in environments built with Docker
+          and launched via GitLab CI.
+
+          Technologies that I'm currently using at Proton are for example: Python,
+          Gtk, NetworkManager, OpenVPN, Wireguard, systemd, GitLab, Debian/Ubuntu and
+          Fedora.
+
+
     - title: Software Consultant @ Ion Beam Applications
       start: May 2021
-      end: Present
+      end: March 2022
       location: Brussels (Belgium)
       sector: Proton Therapy
       website: "[iba-worldwide.com](https://www.iba-worldwide.com)"
@@ -37,7 +76,7 @@ experience:
           and shared memory for IPC, and to avoid duplication of data in RAM. I
           used docker and systemd to deploy and run the software.
 
-          Another project I just started working on is a Qt Python desktop
+          Another project I also briefly worked on is a Qt Python desktop
           application to characterize radio frequency signals. The goal of the
           project is to develop a solution to calibrate PTS systems during
           installation/maintenance in an automated way.
